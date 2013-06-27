@@ -3,30 +3,44 @@
   <head>
     <metacharset='utf-8'>
     <title>To Do List</title>
+    <link rel="stylesheet" href='CSS/normalize.css'>
     <link rel="stylesheet" href='/style.css'>
   </head>
 
   <body>
-    <header>
-      <h1>Header here</h1>
-    </header>
+    <page>
+      <header>
+        <h1>TaskIT</h1>
+      </header>
 
-          <nav>
-            <ul class="navigation">
-              <li><a href="/list">List Tasks By Title</a></li>
-              <li><a href="/new">Create A New List Entry</a></li>
-              <li><a href ="/">Home</a></li>
-            </ul>
-          </nav>
+        <div class='container'>
 
 
+          <div class='cf'>
+           <div class='sidebar'>
+            <nav>
+              <ul class="navigation">
+                <li><a href="/list">View Tasks</a></li>
+                <li><a href="/new">Create A New Task</a></li>
+                <li><a href ="/">Home</a></li>
+              </ul>
+           </nav>
+           </div>
 
-    <%=yield %>
+
+          <div class='display'>
+            <%=yield %>
+          </div>
+        </div>
+
+      </div>
 
 
-    <footer>
-      <p>Something else here in the footer</p>
-    </footer>
+
+      <footer>
+        <p>&copy Luke Robertson</p>
+      </footer>
+    </page>
   </body>
 
 </html>

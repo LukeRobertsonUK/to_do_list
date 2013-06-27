@@ -1,9 +1,10 @@
 <% if @results %>
 
-<h2>All Tasks By Title</h2>
+<h2>Tasks:</h2>
+<p>Click the title of any task to update or remove.</p>
 
   <% @results.each do |result| %>
-  <h3><a href= '/show/<%= result['id'] %>'>Title: <%= result['title'] %></a></h3>
+  <h3><a href= '/show/<%= result['id'] %>'><%= result['title'] %></a></h3>
     <ul>
       <li>Due Date: <%= result['due_date'] %></li>
       <li>Status: <%= result['status'] %></li>
