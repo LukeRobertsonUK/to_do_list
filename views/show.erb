@@ -1,0 +1,13 @@
+
+
+<h2><%= @result['title'] %></h2>
+    <ul>
+      <li>Task ID: <%= @result['id'] %></li>
+      <li>Due Date: <%= @result['due_date'] %></li>
+      <li>Status: <%= @result['status'] %></li>
+      <li>Details: <%= @result['details'] %></li>
+      <li>Owner: <%= @result['owner'] %></li>
+    </ul>
+
+<a href = '/show/<%= @result['id'] %>/delete'>DELETE!</a>
+<a href = '/show/<%= @result['id'] %>/update'>UPDATE</a>

@@ -1,0 +1,15 @@
+<% if @results %>
+
+<h2>All Tasks By Title</h2>
+
+  <% @results.each do |result| %>
+  <h3><a href= '/show/<%= result['id'] %>'>Title: <%= result['title'] %></a></h3>
+    <ul>
+      <li>Due Date: <%= result['due_date'] %></li>
+      <li>Status: <%= result['status'] %></li>
+      <li>Details: <%= result['details'] %></li>
+      <li>Owner: <%= result['owner'] %></li>
+    </ul>
+  <% end %>
+
+<% end %>
