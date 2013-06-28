@@ -46,13 +46,6 @@ get '/show/:id/delete' do
 end
 
 
-puts 'show/:id/update' do
-
-end
-
-
-
-
 post '/new' do
     @title = params[:title].to_s
     @due_date = params[:due_date].to_s
@@ -78,7 +71,8 @@ get '/show/:id/update' do
     db = PG.connect(dbname: 'to_do_app_database', host: 'localhost')
     sql = "select * from to_do where id= '#{params[:id]}'"
     @result = db.exec(sql).first
-  erb :update
+
+    erb :update
   ensure
     db.close
   end
